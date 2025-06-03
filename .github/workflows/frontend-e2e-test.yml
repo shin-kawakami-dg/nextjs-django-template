@@ -1,6 +1,6 @@
 name: Frontend E2E Test
 concurrency:
-  group: ${{ github.ref }}-e2e
+  group: ${{ github.ref }}-frontend-e2e
   cancel-in-progress: true
 on:
   push:

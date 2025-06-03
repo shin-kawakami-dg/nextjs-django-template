@@ -1,6 +1,6 @@
 name: Frontend VRT Test
 concurrency:
-  group: ${{ github.ref }}-vrt
+  group: ${{ github.ref }}-frontend-vrt
   cancel-in-progress: true
 on:
   push:
