@@ -37,5 +37,5 @@ jobs:
         if: always()
         with:
           report-file: "apps/frontend/playwright-report/results.json"
-          comment-title: "VRT Test Results"
+          comment-title: "Frontend VRT Test Results"
           custom-info: "[Download full Report](${{github.server_url}}/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.playwright-report.outputs.artifact-id }})"
