@@ -4,6 +4,7 @@
     "esbenp.prettier-vscode",
     "charliermarsh.ruff",
     "bradlc.vscode-tailwindcss",
-    "ms-python.python"
+    "ms-python.python",
+    "ritwickdey.liveserver"
   ]
 }
