@@ -8,7 +8,12 @@
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "format:fix": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "test": "docker compose run --rm test npx playwright test",
+    "test:e2e": "docker compose run --rm test npm run _test:e2e:inside",
+    "test:vrt": "docker compose run --rm test npm run _test:vrt:inside",
+    "_test:e2e:inside": "npx playwright test --project=e2e-chromium --project=e2e-mobile-webkit",
+    "_test:vrt:inside": "npx playwright test --project=vrt-chromium --project=vrt-mobile-webkit"
   },
   "dependencies": {
     "next": "15.3.3",
@@ -17,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.52.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
