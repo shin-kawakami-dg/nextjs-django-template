@@ -1,4 +1,7 @@
-name: Frontend E2E Test
+name: Frontend E2E Test\
+permissions:
+  contents: read
+  pull-requests: write
 concurrency:
   group: ${{ github.ref }}-frontend-e2e
   cancel-in-progress: true

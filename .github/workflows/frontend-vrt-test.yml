@@ -1,4 +1,7 @@
 name: Frontend VRT Test
+permissions:
+  contents: read
+  pull-requests: write
 concurrency:
   group: ${{ github.ref }}-frontend-vrt
   cancel-in-progress: true
