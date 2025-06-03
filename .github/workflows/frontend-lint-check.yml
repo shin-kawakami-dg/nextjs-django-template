@@ -1,0 +1,26 @@
+name: Frontend Lint Check
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "apps/frontend/**"
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - "apps/frontend/**"
+jobs:
+  frontend-lint-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install dependencies
+        run: npm install
+      - name: Run npm run lint
+        run: npm run lint
