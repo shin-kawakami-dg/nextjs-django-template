@@ -38,4 +38,8 @@ Temporary Items
 # User settings
 .vscode/settings.json
 
+### Environment ###
+# Environment variables
+.env
+
 # End of https://www.toptal.com/developers/gitignore/api/macos

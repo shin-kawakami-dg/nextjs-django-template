@@ -11,6 +11,3 @@ wheels/
 
 # Ruff
 .ruff_cache
-
-# Dotenv
-.env
