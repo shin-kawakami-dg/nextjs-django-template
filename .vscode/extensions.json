@@ -5,6 +5,5 @@
     "charliermarsh.ruff",
     "bradlc.vscode-tailwindcss",
     "ms-python.python",
-    "ritwickdey.liveserver"
   ]
 }
