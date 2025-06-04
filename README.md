@@ -57,10 +57,6 @@ uv run manage.py runserver
 下記コマンドを実行することで Lint や Format を実行できます。
 
 ```
-docker compose up -d
-```
-
-```
 uvx ruff check            # Lintチェック
 uvx ruff format --check   # Formatチェック
 uvx ruff format           # Format自動修正
@@ -77,6 +73,11 @@ DB は後述の`infra/local-db`を使用することで Docker で起動する�
 ### local-db
 
 下記コマンドの実行でローカル開発時の DB を起動することができます。<br>
+
+```
+docker compose up -d
+```
+
 なお、設定は[infra/local-db/.env.example]()を参考に`.env`を作成してください。<br>
 
 > [!WARNING]
