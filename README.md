@@ -87,7 +87,7 @@ docker compose up -d
 
 `.vscode/extensions.json`で recommendations を設定しているため、本プロジェクトを開くと推奨の拡張機能が表示されます。<br>
 基本的にはすべてインストールすることをお勧めします。<br>
-なお、`vscode/settings.json`は個人のプロジェクト設定と競合する可能性があるため含めていませが、推奨設定は下記のとおりです。<br>
+なお、`vscode/settings.json`は個人のプロジェクト設定と競合する可能性があるため含めていませんが、推奨設定は下記のとおりです。<br>
 
 ```json
 {
