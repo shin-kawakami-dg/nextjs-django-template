@@ -18,5 +18,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install uv
         uses: astral-sh/setup-uv@v5
+
+        # テスト実行時にDjangoのDB設定が空になってエラーが発生するのを防ぐため、.env.exampleをコピーして.envを作成
+      - name: Copy .env file
+        run: cp .env.example .env
       - name: Run uv run manage.py test
         run: uv run manage.py test
