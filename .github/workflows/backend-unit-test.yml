@@ -1,0 +1,26 @@
+name: Backend Unit Test
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "apps/backend/**"
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - "apps/backend/**"
+jobs:
+  backend-lint-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/backend
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+        # テスト実行時にDjangoのDB設定が空になってエラーが発生するのを防ぐため、.env.exampleをコピーして.envを作成
+      - name: Copy .env file
+        run: cp .env.example .env
+      - name: Run uv run manage.py test
+        run: uv run manage.py test
