@@ -78,7 +78,7 @@ DB は後述の`infra/local-db`を使用することで Docker で起動する�
 docker compose up -d
 ```
 
-なお、設定は[infra/local-db/.env.example]()を参考に`.env`を作成してください。<br>
+なお、設定は[infra/local-db/.env.example](https://github.com/shin-kawakami-dg/nextjs-django-template/blob/main/infra/local-db/.env.example)を参考に`.env`を作成してください。<br>
 
 > [!WARNING]
 > DB の設定は Django 側の DB 設定と合わせるようにしてください。
